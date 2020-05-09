@@ -1,6 +1,7 @@
 <template>
   <div>
     <span v-if="seen">Now you can see me</span>
+    <span v-else>You cannot see</span>
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   data() {
     return {
-      seen: false
+      seen: true
     }
   }
 }
