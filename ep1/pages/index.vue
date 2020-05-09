@@ -1,7 +1,8 @@
 <template>
   <div>
-    <span v-if="seen">Now you can see me</span>
-    <span v-else>You cannot see</span>
+    <ol>
+      <li v-for="(todo, index) in todos" :key="index">{{ todo.text }}</li>
+    </ol>
   </div>
 </template>
 
@@ -9,7 +10,11 @@
 export default {
   data() {
     return {
-      seen: true
+      todos: [
+        { text: 'Hello Vue' },
+        { text: 'Hello React' },
+        { text: 'Hello Angular' }
+      ]
     }
   }
 }
