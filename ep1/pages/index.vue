@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'You loaded this page on ' + new Date().toLocaleString()
     }
   }
 }
