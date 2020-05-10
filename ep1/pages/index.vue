@@ -2,7 +2,12 @@
   <div>
     <span>{{ message }}</span>
     <br />
-    <input type="text" v-model="message" />
+    <input type="number" v-model.number="message" />
+    <p>{{ selected }}</p>
+    <select v-model="selected">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
   </div>
 </template>
 
@@ -10,7 +15,8 @@
 export default {
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
+      selected: null
     }
   }
 }
