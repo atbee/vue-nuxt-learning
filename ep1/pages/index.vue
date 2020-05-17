@@ -1,27 +1,18 @@
-<template lang="html">
+<template>
   <div>
-    <ol>
-      <TodoItem v-for="todo in todos" :key="todo.id" :item="todo"></TodoItem>
-    </ol>
+    <div v-html="rawHtml"></div>
   </div>
 </template>
 
 <script>
-import TodoItem from '@/components/TodoItem'
 export default {
-  components: {
-    TodoItem
-  },
   data() {
     return {
-      todos: [
-        { id: 1, text: 'hello vue' },
-        { id: 2, text: 'hello react' },
-        { id: 3, text: 'hello angular' }
-      ]
+      msg: 'Hello World!',
+      rawHtml: '<h1>This is raw HTML</h1>'
     }
   }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
