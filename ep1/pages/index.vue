@@ -2,6 +2,8 @@
   <div>
     <span :id="spanId">hello</span>
     <button :disabled="buttonDisabled">cannot click</button>
+    {{ 10 + 20 }}
+    {{ 10 + 20 > 5 ? 'more than 5' : 'less than 5' }}
   </div>
 </template>
 
