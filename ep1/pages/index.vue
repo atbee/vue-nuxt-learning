@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div v-html="rawHtml"></div>
+    <span :id="spanId">hello</span>
+    <button :disabled="buttonDisabled">cannot click</button>
   </div>
 </template>
 
@@ -8,8 +9,8 @@
 export default {
   data() {
     return {
-      msg: 'Hello World!',
-      rawHtml: '<h1>This is raw HTML</h1>'
+      spanId: 'hello',
+      buttonDisabled: true
     }
   }
 }
